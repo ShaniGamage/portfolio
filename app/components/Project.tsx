@@ -107,17 +107,20 @@ export default function Project() {
 
                   {/* View More Buttons */}
                   <div className="flex items-center gap-4 mt-4">
-                    <Link href={project.repo}>
-                      <button
-                        className="flex items-center gap-2 font-semibold group/btn hover:gap-3 transition-all duration-300"
-                        style={{ color: colors.pink }}
-                      >
-                        <GithubIcon
-                          size={16}
-                          className="group-hover/btn:rotate-45 transition-transform"
-                        />
-                      </button>
-                    </Link>
+                    {/* Only show GitHub link for webapp and mobile categories */}
+                    {project.category !== 'uiux' && project.category !== 'logo' && (
+                      <Link href={project.repo}>
+                        <button
+                          className="flex items-center gap-2 font-semibold group/btn hover:gap-3 transition-all duration-300"
+                          style={{ color: colors.pink }}
+                        >
+                          <GithubIcon
+                            size={16}
+                            className="group-hover/btn:rotate-45 transition-transform"
+                          />
+                        </button>
+                      </Link>
+                    )}
 
                     <Link href={project.url}>
                       <button

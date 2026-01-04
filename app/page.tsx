@@ -97,9 +97,28 @@ export default function Portfolio() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [nameComplete, setNameComplete] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+
+      // Determine active section based on scroll position
+      const sections = ['home', 'about', 'technologies', 'gallery', 'projects', 'contact'];
+      const currentSection = sections.find(section => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
+        }
+        return false;
+      });
+
+      if (currentSection) {
+        setActiveSection(currentSection);
+      }
+    };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -177,7 +196,10 @@ export default function Portfolio() {
                   style={{ color: colors.peach }}
                 >
                   {item}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-pink-500 group-hover:w-full transition-all duration-300" />
+                  <span
+                    className={`absolute bottom-0 left-0 h-0.5 bg-pink-500 transition-all duration-300 ${activeSection === item.toLowerCase() ? 'w-full' : 'w-0 group-hover:w-full'
+                      }`}
+                  />
                 </button>
               ))}
             </div>
@@ -197,8 +219,12 @@ export default function Portfolio() {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="block w-full text-left px-4 py-3 hover:bg-gray-700 transition-colors duration-300"
-                style={{ color: colors.peach }}
+                className={`block w-full text-left px-4 py-3 transition-colors duration-300 ${activeSection === item.toLowerCase() ? 'bg-gray-700 border-l-4' : 'hover:bg-gray-700'
+                  }`}
+                style={{
+                  color: colors.peach,
+                  borderColor: activeSection === item.toLowerCase() ? colors.pink : 'transparent'
+                }}
               >
                 {item}
               </button>
