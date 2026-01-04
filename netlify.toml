@@ -1,5 +1,5 @@
 [build]
-base = "my-portfolio"
+# base = "my-portfolio"
 command = "npm run build"
 publish = ".next"
 
