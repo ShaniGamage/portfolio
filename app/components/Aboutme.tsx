@@ -42,9 +42,10 @@ export default function Aboutme() {
                             </h2>
 
                             <p className="text-gray-400 text-lg mt-8 mb-8 leading-relaxed">
-                                Hello, I am Shani Gamage from Matugama, Sri Lanka. I am 23 years old.
-                                I went to Ananda Sastralaya National School Matugama and currently I am a third-year undergraduate at University of Colombo School of Computing.
-                                I am passionate about Machine Learning and Artificial Intelligence.
+                                Hello! I'm Shani Gamage, a third-year undergraduate at the University of Colombo School of Computing, hailing from Matugama, Sri Lanka. I completed my Advanced Level studies at Ananda Sastralaya National School, Matugama, where I developed a strong foundation in science and technology.
+                                I am deeply passionate about Machine Learning and Artificial Intelligence, and I am constantly exploring ways to apply these technologies to real-world problems. Over the years, I have honed my programming skills across multiple languages and frameworks, enabling me to build projects ranging from web applications to UI/UX designs.
+                                Beyond coding, I thrive on learning, innovation, and collaboration. I actively participate in hackathons, work on personal tech projects, and explore the latest developments in AI and software engineering. Traveling and experiencing new cultures fuel my creativity and give me fresh perspectives that I bring into my work.
+                                My goal is to continue growing as a developer and contribute to impactful projects that merge technology with creativity, solving meaningful problems and improving people's lives.
                             </p>
 
                             {/* Tab Navigation */}

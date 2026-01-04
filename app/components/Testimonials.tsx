@@ -51,7 +51,7 @@ export default function Testimonials() {
         <div>
             <section id="testimonials" className="py-32 px-8 relative overflow-hidden">
                 <h2 className="text-6xl font-bold text-center mb-4" style={{ color: colors.peach }}>Gallery</h2>
-                <p className="text-center text-gray-400 mb-16 max-w-2xl mx-auto">Some of </p>
+                <p className="text-center text-gray-400 mb-16 max-w-2xl mx-auto">Here are some snapshots of special moments.</p>
 
                 <div className="max-w-6xl mx-auto relative">
                     {/* Main Slider */}
