@@ -39,10 +39,6 @@ export default function Testimonials() {
         {
             image: '/testimonials/image9.jpeg',
             caption: '"Exporing waterfalls, beaches, gardens, mountains, everywhere of nature "',
-        },
-        {
-            image: '/testimonials/image10.jpeg',
-            caption: '',
         }
     ];
     useEffect(() => {
