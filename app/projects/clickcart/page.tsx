@@ -326,7 +326,7 @@ export default function ClickCartProject() {
                         Web-Based E-Commerce & Logistics Platform
                     </h2>
 
-                    <p className="text-xl text-gray-300 max-w-4xl leading-relaxed mb-10 animate-fadeIn">
+                    <p className="text-sl text-gray-300 max-w-4xl leading-relaxed mb-10 animate-fadeIn">
                         A comprehensive platform that integrates e-commerce with last-mile delivery logistics.
                         Replacing siloed, manual systems with a modern, scalable solution for Click Cart (Pvt) Ltd.,
                         Sri Lanka's rapidly growing logistics company.

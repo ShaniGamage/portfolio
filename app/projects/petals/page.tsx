@@ -217,7 +217,7 @@ export default function FlowerShopLanding() {
                         Petals.
                     </h1>
 
-                    <p className="text-xl md:text-lg text-white/90 max-w-4xl leading-relaxed mb-10 animate-fadeIn">
+                    <p className="text-sl md:text-lg text-white/90 max-w-4xl leading-relaxed mb-10 animate-fadeIn">
                         A fully responsive flower shop e-commerce website with a secure admin panel, built using HTML, CSS, JavaScript,
                         PHP, and MySQL. Features include user authentication, product management, shopping cart functionality, and a
                         comprehensive admin dashboard for managing products, orders, and customers.

@@ -290,7 +290,7 @@ export default function StudentManagementPage() {
 
                     {/* Description */}
                     <p
-                        className=" md:text-lg max-w-4xl leading-relaxed mb-10 animate-fadeIn font-medium"
+                        className=" md:text-lg text-sl max-w-4xl leading-relaxed mb-10 animate-fadeIn font-medium"
                         style={{
                             color: colors.purpleLight,
                             animationDelay: '0.2s'
@@ -313,7 +313,7 @@ export default function StudentManagementPage() {
                             }}
                         >
                             <ExternalLink size={20} className="group-hover:rotate-12 transition-transform duration-300" />
-                            Live Demo
+                            Interfaces
                         </button>
                         <button
                             className="group flex items-center gap-3 px-8 py-4 rounded-full font-bo;d text- transition-all duration-300 hover:scale-110 shadow-lg border-2"
@@ -322,6 +322,7 @@ export default function StudentManagementPage() {
                                 color: colors.purpleLight,
                                 borderColor: colors.purple
                             }}
+                            onClick={()=>window.open('https://github.com/ShaniGamage/frontend')}
                         >
                             <Github size={20} className="group-hover:rotate-12 transition-transform duration-300" />
                             Github Repo

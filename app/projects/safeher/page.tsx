@@ -212,7 +212,7 @@ export default function SafeHerLanding() {
             SafeHer
           </h1>
           
-          <p className="text-xl md:text-lg text-white/90 max-w-4xl leading-relaxed mb-10 animate-fadeIn">
+          <p className="text-sl md:text-lg text-white/90 max-w-4xl leading-relaxed mb-10 animate-fadeIn">
             A comprehensive women's emergency SOS and safe route mobile application designed specifically for Sri Lankan women. 
             Real-time location tracking, instant alerts, and community-powered safety zones to ensure women's safety anytime, anywhere.
           </p>

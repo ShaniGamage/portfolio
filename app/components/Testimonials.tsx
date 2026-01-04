@@ -7,7 +7,7 @@ export default function Testimonials() {
     const testimonials = [
         {
             image: '/testimonials/image1.jpg',
-            caption: 'First experince of attending to a Hackthon - organized by NSBM University',
+            caption: 'First experince of attending to a Hackthon - organized by NSBM Green University',
         },
         {
             image: '/testimonials/image2.jpg',
@@ -19,7 +19,7 @@ export default function Testimonials() {
         },
         {
             image: '/testimonials/image4.jpg',
-            caption: 'Team skyDevs on "Beauty of Cloud"',
+            caption: 'Team skyDevs on "Beauty of Cloud" finale',
         },
         {
             image: '/testimonials/image5.jpg',
@@ -39,6 +39,10 @@ export default function Testimonials() {
         {
             image: '/testimonials/image9.jpeg',
             caption: '"Exporing waterfalls, beaches, gardens, mountains, everywhere of nature "',
+        },
+        {
+            image: '/testimonials/image10.jpeg',
+            caption: '',
         }
     ];
     useEffect(() => {

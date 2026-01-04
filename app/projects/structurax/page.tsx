@@ -262,7 +262,7 @@ export default function StructuraXProject() {
                         Smart Construction Project Management System
                     </h2>
 
-                    <p className="text-xl text-gray-300 max-w-4xl leading-relaxed mb-10 animate-fadeIn">
+                    <p className="text-sl text-gray-300 max-w-4xl leading-relaxed mb-10 animate-fadeIn">
                         A comprehensive web-based construction management platform that facilitates effective coordination,
                         monitoring, and decision-making among all stakeholders from design to completion.
                     </p>
