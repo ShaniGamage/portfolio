@@ -41,12 +41,11 @@ export default function Aboutme() {
                                 <div className="absolute -bottom-3 left-0 w-12 h-1 rounded-full" style={{ backgroundColor: colors.pink }}></div>
                             </h2>
 
-                            <p className="text-gray-400 text-lg mt-8 mb-8 leading-relaxed">
-                                Hello! I'm Shani Gamage, a third-year undergraduate at the University of Colombo School of Computing, hailing from Matugama, Sri Lanka. I completed my Advanced Level studies at Ananda Sastralaya National School, Matugama, where I developed a strong foundation in science and technology.
-                                I am deeply passionate about Machine Learning and Artificial Intelligence, and I am constantly exploring ways to apply these technologies to real-world problems. Over the years, I have honed my programming skills across multiple languages and frameworks, enabling me to build projects ranging from web applications to UI/UX designs.
-                                Beyond coding, I thrive on learning, innovation, and collaboration. I actively participate in hackathons, work on personal tech projects, and explore the latest developments in AI and software engineering. Traveling and experiencing new cultures fuel my creativity and give me fresh perspectives that I bring into my work.
-                                My goal is to continue growing as a developer and contribute to impactful projects that merge technology with creativity, solving meaningful problems and improving people's lives.
-                            </p>
+                            <p className="text-gray-400 text-sl mt-8 mb-8 leading-relaxed">
+                                Hello! I'm Shani Gamage, a third-year undergraduate at the University of Colombo School of Computing from Matugama, Sri Lanka. I completed my A/Ls at Ananda Sastralaya National School, where I built a strong foundation in science and technology.
+I am passionate about Machine Learning and Artificial Intelligence, and I enjoy building projects across web applications, mobile apps, and UI/UX design. Beyond coding, I participate in hackathons, explore new technologies, and draw inspiration from traveling and experiencing new cultures.
+My goal is to grow as a developer and contribute to projects that combine technology and creativity to solve meaningful problems.
+</p>
 
                             {/* Tab Navigation */}
                             <div className="flex gap-4 mb-10 flex-wrap">
