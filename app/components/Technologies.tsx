@@ -9,6 +9,7 @@ export default function Technologies() {
     const [isDragging, setIsDragging] = useState(false);
     const [lastPosition, setLastPosition] = useState({ x: 0, y: 0 });
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [hoveredTech, setHoveredTech] = useState<number | null>(null);
 
     useEffect(() => {
         const autoRotate = setInterval(() => {
@@ -62,6 +63,7 @@ export default function Technologies() {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
         setIsMenuOpen(false);
     };
+    
     return (
         <div>
             {/* Skills & Technologies Section */}
@@ -136,23 +138,59 @@ export default function Technologies() {
                                     const depth = (z + 1) / 2;
                                     const opacity = 0.3 + depth * 0.7;
                                     const size = tech.size * (0.5 + depth * 0.5);
+                                    const isHovered = hoveredTech === idx;
 
                                     return (
                                         <div
                                             key={idx}
-                                            className="absolute whitespace-nowrap font-semibold transition-all duration-100"
+                                            className="absolute flex flex-col items-center gap-2 transition-all duration-100"
                                             style={{
                                                 transform: `translate3d(${translateX}px, ${translateY}px, ${translateZ}px)`,
                                                 opacity: opacity,
-                                                fontSize: `${size}px`,
-                                                color: depth > 0.6 ? colors.peach : depth > 0.4 ? colors.pink : colors.purple,
                                                 zIndex: Math.floor(depth * 100),
-                                                textShadow: depth > 0.5 ? `0 0 20px ${colors.pink}80` : 'none',
-                                                pointerEvents: 'none',
-                                                userSelect: 'none'
+                                                pointerEvents: 'auto',
                                             }}
+                                            onMouseEnter={() => setHoveredTech(idx)}
+                                            onMouseLeave={() => setHoveredTech(null)}
                                         >
-                                            {tech.name}
+                                            <div
+                                                className="whitespace-nowrap font-semibold"
+                                                style={{
+                                                    fontSize: `${size}px`,
+                                                    color: depth > 0.6 ? colors.peach : depth > 0.4 ? colors.pink : colors.purple,
+                                                    textShadow: depth > 0.5 ? `0 0 20px ${colors.pink}80` : 'none',
+                                                    userSelect: 'none'
+                                                }}
+                                            >
+                                                {tech.name}
+                                            </div>
+                                            
+                                            {/* Capacity Bar */}
+                                            {isHovered && tech.capacity && (
+                                                <div className="flex items-center gap-2 whitespace-nowrap">
+                                                    <div 
+                                                        className="h-1.5 bg-gray-700 rounded-full overflow-hidden"
+                                                        style={{ width: '80px' }}
+                                                    >
+                                                        <div
+                                                            className="h-full rounded-full transition-all duration-300"
+                                                            style={{
+                                                                width: `${tech.capacity}%`,
+                                                                backgroundColor: depth > 0.6 ? colors.peach : depth > 0.4 ? colors.pink : colors.purple,
+                                                                boxShadow: `0 0 10px ${depth > 0.6 ? colors.peach : depth > 0.4 ? colors.pink : colors.purple}80`
+                                                            }}
+                                                        />
+                                                    </div>
+                                                    <span 
+                                                        className="text-xs font-medium"
+                                                        style={{
+                                                            color: depth > 0.6 ? colors.peach : depth > 0.4 ? colors.pink : colors.purple,
+                                                        }}
+                                                    >
+                                                        {tech.capacity}%
+                                                    </span>
+                                                </div>
+                                            )}
                                         </div>
                                     );
                                 })}
@@ -160,7 +198,7 @@ export default function Technologies() {
 
                             {/* Hint text */}
                             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 text-sm text-gray-500">
-                                Drag to rotate
+                                Drag to rotate • Hover for proficiency
                             </div>
                         </div>
                     </div>

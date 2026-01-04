@@ -58,7 +58,7 @@ export default function Portfolio() {
         if (displayedTitle.length < currentTitle.length) {
           setDisplayedTitle(currentTitle.slice(0, displayedTitle.length + 1));
         } else {
-          setTimeout(() => setIsDeleting(true), 1500);
+          setTimeout(() => setIsDeleting(true), 500);
         }
       } else {
         if (displayedTitle.length > 0) {
