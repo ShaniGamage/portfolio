@@ -6,39 +6,26 @@ export default function Testimonials() {
 
     const testimonials = [
         {
-            image: '/testimonials/image1.jpg',
-            caption: 'First experince of attending to a Hackthon - organized by NSBM Green University',
+            image: '/testimonials/image1.jpg'
+           
         },
         {
-            image: '/testimonials/image2.jpg',
-            caption: 'Presenting our Student Managemnet System - UniHUB',
+            image: '/testimonials/image2.jpg'
         },
         {
-            image: '/testimonials/image3.jpg',
-            caption: 'First time of attending to Could based Hackthon - organized by IEEE CS JPura University',
+            image: '/testimonials/image3.jpg'
         },
         {
-            image: '/testimonials/image4.jpg',
-            caption: 'Team skyDevs on "Beauty of Cloud" finale',
+            image: '/testimonials/image4.jpg'
         },
         {
-            image: '/testimonials/image5.jpg',
-            caption: 'Dedicated third-year group project team members',
+            image: '/testimonials/image5.jpg'
         },
         {
-            image: '/testimonials/image6.jpeg',
-            caption: 'First day of my Internship at Fortude Pvt Ltd',
+            image: '/testimonials/image6.jpeg'
         },
         {
             image: '/testimonials/image7.jpeg',
-        },
-        {
-            image: '/testimonials/image8.jpeg',
-            caption: '"When I am not coding, meet me where sky touches the peaks"',
-        },
-        {
-            image: '/testimonials/image9.jpeg',
-            caption: '"Exporing waterfalls, beaches, gardens, mountains, everywhere of nature "',
         }
     ];
     useEffect(() => {
@@ -77,12 +64,12 @@ export default function Testimonials() {
                                     </div>
 
                                     {/* Caption Content */}
-                                    <div className="absolute bottom-0 left-0 right-0 p-12 text-white">
+                                    {/* <div className="absolute bottom-0 left-0 right-0 p-12 text-white">
                                         <div className="max-w-3xl">
                                             <div className="text-6xl mb-4 opacity-50" style={{ color: colors.peach }}>"</div>
                                             <p className="text-xl mb-6 leading-relaxed ">{testimonial.caption}</p>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         ))}
