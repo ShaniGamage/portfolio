@@ -315,7 +315,7 @@ export default function Portfolio() {
               >
                 {/* Profile Image */}
                 <img
-                  src='hero2.jpeg'
+                  src='hero2.png'
                   alt="Shani Gamage"
                   className="w-full h-full object-cover"
                 />
